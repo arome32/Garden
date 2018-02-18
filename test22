@@ -1,0 +1,49 @@
+10X10
+banaNa (5,4)
+banana (8,7)
+banana (0,0)
+cOconut (0,0)
+coconut (1,1)
+yAm (2,3)
+yam (4,9)
+tOmato (7,6)
+tomato (9,1)
+lEttuce (1,4)
+lettuce (3,3)
+rOse (8,8)
+rose (5,0)
+pIne (6,6)
+pine (7,7)
+Sunflower (4,1)
+sunflower (3,1)
+Daisy (2,9)
+daisy (8,3)
+
+prinT
+Grow 1
+print
+grow 1 Flower
+print
+cut pIne
+print
+stats
+Cut
+stats
+print
+paper banaNa
+stats
+Paper
+stats 
+bloom rOse
+print
+Bloom
+print
+pick daIsy
+print
+stats
+PICK
+ripen Lettuce
+RIpen
+harvest TOMATO
+hArvest 
+
