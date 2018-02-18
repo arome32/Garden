@@ -19,12 +19,10 @@ sunflower (3,1)
 daisy (2,9)
 daisy (8,3)
 
-funfact daisy
-funfact sunflower
-funfact banana
-funfact coconut
-funfact pine
-funfact rose
-funfact yam
-funfact lettuce
-funfact tomato 
+print
+ripen (3,3)
+print
+ripen tomato
+print 
+ripen
+print

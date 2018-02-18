@@ -1,0 +1,105 @@
+10x10
+banana (5,4)
+banana (8,7)
+banana (0,0)
+coconut (0,0)
+coconut (1,1)
+yam (2,3)
+yam (4,9)
+tomato (7,6)
+tomato (9,1)
+lettuce (1,4)
+lettuce (3,3)
+rose (8,8)
+rose (5,0)
+pine (6,6)
+pine (7,7)
+sunflower (4,1)
+sunflower (3,1)
+daisy (2,9)
+daisy (8,3)
+
+print
+ripen daisy
+ripen sunflower
+ripen banana
+ripen coconut
+ripen pine
+ripen rose
+ripen yam
+ripen lettuce
+ripen tomato
+print  
+bloom daisy
+bloom sunflower
+bloom banana
+bloom coconut
+bloom pine
+bloom rose
+bloom yam
+bloom lettuce
+bloom tomato
+print 
+harvest daisy
+harvest sunflower
+harvest banana
+harvest coconut
+harvest pine
+harvest rose
+harvest yam
+harvest lettuce
+harvest tomato
+print 
+stats
+pick daisy
+pick sunflower
+pick banana
+pick coconut
+pick pine
+pick rose
+pick yam
+pick lettuce
+pick tomato
+print 
+stats 
+cut daisy
+cut sunflower
+cut banana
+cut coconut
+cut pine
+cut rose
+cut yam
+cut lettuce
+cut tomato
+print 
+stats 
+paper daisy
+paper sunflower
+paper banana
+paper coconut
+paper pine
+paper rose
+paper yam
+paper lettuce
+paper tomato
+stats
+eat daisy
+eat sunflower
+eat banana
+eat coconut
+eat pine
+eat rose
+eat yam
+eat lettuce
+eat tomato
+stats 
+smell daisy
+smell sunflower
+smell banana
+smell coconut
+smell pine
+smell rose
+smell yam
+smell lettuce
+smell tomato
+stats
