@@ -1,16 +1,6 @@
 1x1
-banaNa (1,1)
+banana (1,1)
 
-prinT
-GROW 5
 print
-cUt coconut
+grow 5
 print
-Stats
-cut banAna
-print 
-stats 
-paper pIne
-stats
-papeR banana
-stats
