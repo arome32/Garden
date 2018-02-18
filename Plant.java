@@ -1,4 +1,4 @@
-public class Plant {
+public abstract class Plant {
 	int x, y;
 	String type;
 
@@ -31,4 +31,6 @@ public class Plant {
 	public void setY(int y) {
 		this.y = y;
 	}
+
+	public abstract String funFact();
 }

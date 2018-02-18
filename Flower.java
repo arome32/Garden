@@ -18,7 +18,8 @@ public class Flower extends Plant {
 		return retVal;
 	}
 
-	public String funfact() {
+	@Override
+	public String funFact() {
 		String fFact = "";
 		if (type.equals("sunflower"))
 			fFact = "Sunflowers were brought to Russia by royalty.";

@@ -1,10 +1,16 @@
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Garden {
 
 	Plant[][] garden;
+	HashMap<String, Integer> hashy;
 
 	public Garden(int rows, int cols) {
 		// TODO Auto-generated constructor stub
 		garden = new Plant[rows][cols];
+		hashy = new HashMap<>();
 	}
 
 	public void plant(String type, int x, int y) {
@@ -72,34 +78,80 @@ public class Garden {
 		}
 	}
 
+	private void addToStorage(String type) {
+		if (hashy.containsKey(type)) {
+			hashy.put(type, hashy.get(type) + 1);
+		} else {
+			hashy.put(type, 1);
+		}
+	}
+
+	private void removeFromStorage(String type) {
+		if (hashy.containsKey(type) && hashy.get(type) != 0) {
+			hashy.put(type, hashy.get(type) - 1);
+		} else {
+			System.out.println(type + " cannot be removed.");
+		}
+	}
+
 	// Cuts down all trees
-	public void cutDown() {
+	public void cutDown(String type) {
+		ArrayList<String> trees = new ArrayList<String>();
+		trees.add("pine");
+		trees.add("coconut");
+		trees.add("banana");
+
 		for (int i = 0; i < garden.length; i++) {
 			for (int j = 0; j < garden[i].length; j++) {
-				if (garden[i][j] instanceof Tree) {
-					garden[i][j] = null;
+				if (trees.contains(type)) {
+					if (garden[i][j].getType().equals(type)) {
+						garden[i][j] = null;
+						addToStorage(type);
+					}
+				} else {
+					System.out.println("You cannot cut down a " + type);
 				}
 			}
 		}
 	}
 
 	// Harvests all vegetables
-	public void harvest() {
+	public void harvest(String type) {
+		ArrayList<String> trees = new ArrayList<String>();
+		trees.add("carrot");
+		trees.add("potato");
+		trees.add("tomato");
+
 		for (int i = 0; i < garden.length; i++) {
 			for (int j = 0; j < garden[i].length; j++) {
-				if (garden[i][j] instanceof Vegetable) {
-					garden[i][j] = null;
+				if (trees.contains(type)) {
+					if (garden[i][j].getType().equals(type)) {
+						garden[i][j] = null;
+						addToStorage(type);
+					}
+				} else {
+					System.out.println("You cannot cut down a " + type);
 				}
 			}
 		}
 	}
 
 	// Picks all flowers
-	public void pick() {
+	public void pick(String type) {
+		ArrayList<String> trees = new ArrayList<String>();
+		trees.add("sunflower");
+		trees.add("tulip");
+		trees.add("dasiy");
+
 		for (int i = 0; i < garden.length; i++) {
 			for (int j = 0; j < garden[i].length; j++) {
-				if (garden[i][j] instanceof Flower) {
-					garden[i][j] = null;
+				if (trees.contains(type)) {
+					if (garden[i][j].getType().equals(type)) {
+						garden[i][j] = null;
+						addToStorage(type);
+					}
+				} else {
+					System.out.println("You cannot cut down a " + type);
 				}
 			}
 		}
@@ -133,4 +185,50 @@ public class Garden {
 		}
 	}
 
+	public void eat(String type) {
+		// TODO Auto-generated method stub
+		switch (type) {
+		case "carrot":
+		case "potato":
+		case "tomato":
+			removeFromStorage(type);
+			break;
+		default:
+			System.out.println("You cannot eat a " + type);
+			break;
+		}
+	}
+
+	public void smell(String type) {
+		// TODO Auto-generated method stub
+		switch (type) {
+		case "sunflower":
+		case "tulip":
+		case "daisy":
+			removeFromStorage(type);
+			break;
+		default:
+			System.out.println("You cannot smell a " + type);
+			break;
+		}
+	}
+
+	public void paper(String type) {
+		// TODO Auto-generated method stub
+		switch (type) {
+		case "pine":
+		case "coconut":
+		case "banana":
+			removeFromStorage(type);
+			break;
+		default:
+			System.out.println("You cannot create paper from a " + type);
+			break;
+		}
+	}
+
+	public void stats() {
+		// TODO Auto-generated method stub
+
+	}
 }

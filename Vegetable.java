@@ -16,8 +16,9 @@ public class Vegetable extends Plant {
 		}
 		return retVal;
 	}
-
-	public String funfact() {
+	
+	@Override
+	public String funFact() {
 		String fFact = "";
 		if (type.equals("carrot"))
 			fFact = "Carrots were originally purple in colour!";
@@ -28,4 +29,5 @@ public class Vegetable extends Plant {
 		}
 		return fFact;
 	}
+
 }
