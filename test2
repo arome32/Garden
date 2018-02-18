@@ -1,0 +1,62 @@
+2x2
+banana (0,0)
+pine (1,1)
+daisy (1,0)
+
+print
+grow 5 banana
+print
+grow 5 pine
+print
+grow 5 daisy
+print
+grow 5 sunflower
+print
+funfact daisy
+funfact pine
+funfact banana
+eat banana
+print
+eat daisy
+print 
+eat coconut
+print
+pick banana
+print
+paper banana
+print 
+stats
+cut banana
+print
+cut daisy
+print
+smell daisy
+stats
+smell tulip
+stats
+pick daisy
+print
+stats 
+cut coconut
+print
+stats
+cut pine
+stats
+print
+smell daisy 
+stats
+print
+harvest daisy
+stats
+print
+harvest pine
+stats
+print
+paper pine
+stats 
+paper coconut
+stats 
+paper daisy
+stats
+paper banana 
+stats  

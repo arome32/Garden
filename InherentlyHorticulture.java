@@ -11,7 +11,7 @@
  * carrot, potato, tomato
  * and dimensions can be 0 to garden dimension - 1,
  * followed by a list of commands which can be any of:
- * CUT, PICK, HARVEST, PRINT, EAT, SMELL, PAPER, STATS
+ * CUT, PICK, HARVEST, PRINT, EAT, SMELL, PAPER, STATS, FUNFACT
  * Then constructs a garden object with plant objects
  * at every location specified and calls methods on
  * garden for each command.
@@ -89,7 +89,9 @@ public class InherentlyHorticulture {
 			command = scanny.next().toLowerCase();
 			if (command.equals("print")) {
 				garden.print();
-			} else if (command.equals("cut")) {
+			} else if (command.equals("funfact")) {
+				garden.funfact(scanny.next().toLowerCase());
+			}	else if (command.equals("cut")) {
 				garden.cut();
 			} else if (command.equals("harvest")) {
 				garden.harvest();
