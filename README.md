@@ -24,9 +24,9 @@ This is a **two-week assignment**, so this write up will be comprised of two sec
 In order to create this garden simulation, you will need these key components:
 
   * Garden.java that simulates a garden by:
-  	* Containing a 2D list of **ANY** plant objects
-  	* Containing functionality to receive/execute commands such as, but not limited to, PLANT and PRINT 
-  	* Containing a Screen object for quick and easy printing
+  	* Containing a 2D list of **ANY** Plant objects.
+  	* Containing functionality to receive/execute commands such as, but not limited to, PLANT and PRINT. 
+  	* Containing a Screen object for quick and easy printing.
   	
   * A Plant class hierarchy with Plant.java as the superclass that extends to its following subclasses:
    	* Flower.java
@@ -35,11 +35,16 @@ In order to create this garden simulation, you will need these key components:
    	
   * Screen.java that will use information from both the Garden and the Plants to print out a representation of the garden
   
-  * PA6Main.java
+  * PA6Main.java that will:
+  	* Create the Garden and Plant objects by reading in lines from an input file.
+  	* Plant the created Plant objects inside of the Garden.
+  	* Do some error checking to make sure Plants are not planted outside of the garden.
+  	* Supply the Garden with commands based on lines in the input file.
 
 ## Week 1
 
-
+For the first week's portion of this assignment, you will be implementing the Garden object, the Screen 
+Object, and the Plant Hierarchy. You will also be implementing the code to handle both the PLANT and PRINT commands.
 
 ### The classes
 
