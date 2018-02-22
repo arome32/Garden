@@ -1,6 +1,7 @@
 public abstract class Plant {
 	int x, y;
 	String type;
+	private String representation;
 
 	public Plant(String type, int xpos, int ypos) {
 		setType(type);
@@ -33,4 +34,12 @@ public abstract class Plant {
 	}
 
 	public abstract String funFact();
+
+	public String getRepresentation() {
+		return representation;
+	}
+
+	public void setRepresentation(String representation) {
+		this.representation = representation;
+	}
 }

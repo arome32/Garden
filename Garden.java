@@ -1,16 +1,16 @@
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Garden {
 
 	Plant[][] garden;
-	HashMap<String, Integer> hashy;
+	HashMap<String, Integer> storage;
 
 	public Garden(int rows, int cols) {
 		// TODO Auto-generated constructor stub
 		garden = new Plant[rows][cols];
-		hashy = new HashMap<>();
+		storage = new HashMap<>();
 	}
 
 	public void plant(String type, int x, int y) {
@@ -42,6 +42,20 @@ public class Garden {
 				growHelper(garden[i][j]);
 			}
 		}
+	}
+
+	public void grow(String type) {
+		for (int i = 0; i < garden.length; i++) {
+			for (int j = 0; j < garden[i].length; j++) {
+				if (garden[i][j].type.equals(type)) {
+					growHelper(garden[i][j]);
+				}
+			}
+		}
+	}
+
+	public void grow(int x, int y) {
+		growHelper(garden[x][y]);
 	}
 
 	private void growHelper(Plant planty) {
@@ -79,16 +93,16 @@ public class Garden {
 	}
 
 	private void addToStorage(String type) {
-		if (hashy.containsKey(type)) {
-			hashy.put(type, hashy.get(type) + 1);
+		if (storage.containsKey(type)) {
+			storage.put(type, storage.get(type) + 1);
 		} else {
-			hashy.put(type, 1);
+			storage.put(type, 1);
 		}
 	}
 
 	private void removeFromStorage(String type) {
-		if (hashy.containsKey(type) && hashy.get(type) != 0) {
-			hashy.put(type, hashy.get(type) - 1);
+		if (storage.containsKey(type) && storage.get(type) != 0) {
+			storage.put(type, storage.get(type) - 1);
 		} else {
 			System.out.println(type + " cannot be removed.");
 		}
@@ -227,8 +241,72 @@ public class Garden {
 		}
 	}
 
+	public void ripen() {
+		for (int i = 0; i < garden.length; i++) {
+			for (int j = 0; j < garden[i].length; j++) {
+				if (garden[i][j] instanceof Vegetable) {
+					((Vegetable) garden[i][j]).ripen();
+				}
+			}
+		}
+	}
+
+	public void ripen(String type) {
+		for (int i = 0; i < garden.length; i++) {
+			for (int j = 0; j < garden[i].length; j++) {
+				if (garden[i][j] instanceof Vegetable && garden[i][j].getType().equals(type)) {
+					((Vegetable) garden[i][j]).ripen();
+				}
+			}
+		}
+	}
+
+	public void ripen(int x, int y) {
+		if (garden[x][y] instanceof Vegetable) {
+			((Vegetable) garden[x][y]).ripen();
+		} else {
+			System.out.println("Only a Vegetable can ripe.");
+		}
+	}
+
+	public void bloom() {
+		for (int i = 0; i < garden.length; i++) {
+			for (int j = 0; j < garden[i].length; j++) {
+				if (garden[i][j] instanceof Flower) {
+					((Flower) garden[i][j]).bloom();
+				}
+			}
+		}
+	}
+
+	public void bloom(String type) {
+		for (int i = 0; i < garden.length; i++) {
+			for (int j = 0; j < garden[i].length; j++) {
+				if (garden[i][j] instanceof Flower && garden[i][j].getType().equals(type)) {
+					((Flower) garden[i][j]).bloom();
+				}
+			}
+		}
+	}
+
+	public void bloom(int x, int y) {
+		if (garden[x][y] instanceof Flower) {
+			((Flower) garden[x][y]).bloom();
+		} else {
+			System.out.println("Only a Flower can bloom.");
+		}
+	}
+
 	public void stats() {
 		// TODO Auto-generated method stub
-
+		System.out.println("This is what you currently have in storage:");
+		ArrayList<String> temp = new ArrayList<>();
+		for (String type : storage.keySet()) {
+			temp.add(type);
+		}
+		Collections.sort(temp);
+		for (String string : temp) {
+			System.out.println(string + ": " + storage.get(string));
+		}
 	}
 }

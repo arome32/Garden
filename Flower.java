@@ -1,21 +1,24 @@
 
 public class Flower extends Plant {
 
+	private boolean bloomed;
+
 	public Flower(String type, int xpos, int ypos) {
 		super(type, xpos, ypos);
+		this.bloomed = false;
+
+		if (type.equals("sunflower"))
+			this.setRepresentation("s");
+		else if (type.equals("dasiy")) {
+			this.setRepresentation("d");
+		} else if (type.equals("rose")) {
+			this.setRepresentation("r");
+		}
 	}
 
 	@Override
 	public String toString() {
-		String retVal = "";
-		if (type.equals("sunflower"))
-			retVal = "S";
-		else if (type.equals("dasiy")) {
-			retVal = "D";
-		} else if (type.equals("tulip")) {
-			retVal = "T";
-		}
-		return retVal;
+		return this.getRepresentation();
 	}
 
 	@Override
@@ -25,10 +28,30 @@ public class Flower extends Plant {
 			fFact = "Sunflowers were brought to Russia by royalty.";
 		else if (type.equals("dasiy")) {
 			fFact = "A daisy is actually two flowers in one.";
-		} else if (type.equals("tulip")) {
-			fFact = "Tulips are the symbol for love, passion, perfect lovers and romance.";
+		} else if (type.equals("rose")) {
+			fFact = "Fun fact about roses";
 		}
 		return fFact;
+	}
+
+	public void bloom() {
+		setBloom(true);
+
+		if (type.equals("sunflower"))
+			this.setRepresentation("S");
+		else if (type.equals("dasiy")) {
+			this.setRepresentation("D");
+		} else if (type.equals("rose")) {
+			this.setRepresentation("R");
+		}
+	}
+
+	public boolean getBloom() {
+		return bloomed;
+	}
+
+	public void setBloom(boolean bloomed) {
+		this.bloomed = bloomed;
 	}
 
 }

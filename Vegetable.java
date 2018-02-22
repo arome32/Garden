@@ -1,22 +1,23 @@
 public class Vegetable extends Plant {
 
+	private boolean ripened;
+
 	public Vegetable(String type, int xpos, int ypos) {
 		super(type, xpos, ypos);
+		if (type.equals("lettuce"))
+			this.setRepresentation("l");
+		else if (type.equals("yams")) {
+			this.setRepresentation("y");
+		} else if (type.equals("tomato")) {
+			this.setRepresentation("t");
+		}
 	}
 
 	@Override
 	public String toString() {
-		String retVal = "";
-		if (type.equals("carrot"))
-			retVal = "V";
-		else if (type.equals("potato")) {
-			retVal = "0";
-		} else if (type.equals("tomato")) {
-			retVal = "O";
-		}
-		return retVal;
+		return this.getRepresentation();
 	}
-	
+
 	@Override
 	public String funFact() {
 		String fFact = "";
@@ -28,6 +29,26 @@ public class Vegetable extends Plant {
 			fFact = "Tomatoes can be yellow, pink, purple, black and even white!";
 		}
 		return fFact;
+	}
+
+	public void ripen() {
+		setRipen(true);
+
+		if (type.equals("sunflower"))
+			this.setRepresentation("S");
+		else if (type.equals("dasiy")) {
+			this.setRepresentation("D");
+		} else if (type.equals("rose")) {
+			this.setRepresentation("R");
+		}
+	}
+
+	public boolean getRipen() {
+		return ripened;
+	}
+
+	public void setRipen(boolean ripened) {
+		this.ripened = ripened;
 	}
 
 }

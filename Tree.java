@@ -3,21 +3,20 @@ public class Tree extends Plant {
 
 	public Tree(String type, int xpos, int ypos) {
 		super(type, xpos, ypos);
+		if (type.equals("coconut"))
+			this.setRepresentation("C");
+		else if (type.equals("pine")) {
+			this.setRepresentation("P");
+		} else if (type.equals("banana")) {
+			this.setRepresentation("B");
+		}
 	}
 
 	@Override
 	public String toString() {
-		String retVal = "";
-		if (type.equals("coconut"))
-			retVal = "C";
-		else if (type.equals("pine")) {
-			retVal = "P";
-		} else if (type.equals("banana")) {
-			retVal = "B";
-		}
-		return retVal;
+		return this.getRepresentation();
 	}
-	
+
 	@Override
 	public String funFact() {
 		String fFact = "";
