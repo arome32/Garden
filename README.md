@@ -71,7 +71,7 @@ If the PRINT command is read then you should iterate over all Plants in the Gard
 **The Plant Class:**<br/>
 You will create a class called Plant.java that is a basic outline for every other type of plant. Each plant will have an x and y location indicating where it is in the garden, a type, to know what type of plant it is specifically, will get more to this when talking about the Plant subclasses, and a char[][] that will act as a unique representation for the each given type of plant. The size of which will be equal to the size of each plot in the garden, as a plant should fill the plot it has been planted in. When creating a generic Plant Class, instantiate the representation array as an array full of periods. 
 
-**Needed Methods**<br/>
+**Needed Methods**
   * print: This takes in a Screen Object and copies it's representation array into the correct placement in the Screen Object's array.
 
 **The Tree Class:**<br/>
