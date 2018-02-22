@@ -56,26 +56,25 @@ When creating the garden, you should have three things:
   * The # of cols for the garden
   * The size of each plot in the garden (given N, all plots should be of size NxN)
   
-**Commands**
+**Commands**<br/>
 For the first week, you will need to implement the PLANT and PRINT commands. (To learn how commands are found in the input file, visit the input file section of this write up)
 
-**The PLANT Command**
-
-If the PLANT command is read, it should be followed by coordinates and the type of plant to be planted.
+**The PLANT Command**<br/>
+If the PLANT command is read, it should be followed by coordinates and the type of Plant to be planted.
 (For more information on types, visit the Plant Hierarchy section) Use this type to plant the correct subclass of plant into the garden at the coordinates read. 
 
-**The PRINT Command**
-
-If the PRINT command is read then you should iterate over all plants calling their print function and passing in the Screen object. Once the Screen Object has the representation data for all of the Plants in the Garden, print all of that data at once. 
+**The PRINT Command**<br/>
+If the PRINT command is read then you should iterate over all Plants in the Garden calling their print function and passing in the Screen Object. Once the Screen Object has the representation data for all of the Plants in the Garden, print all of that data at once. 
 
 ### The Plant Hierarchy
 
-**The Plant Class:**
-
+**The Plant Class:**<br/>
 You will create a class called Plant.java that is a basic outline for every other type of plant. Each plant will have an x and y location indicating where it is in the garden, a type, to know what type of plant it is specifically, will get more to this when talking about the Plant subclasses, and a char[][] that will act as a unique representation for the each given type of plant. The size of which will be equal to the size of each plot in the garden, as a plant should fill the plot it has been planted in. When creating a generic Plant Class, instantiate the representation array as an array full of periods. 
 
-**The Tree Class:**
+**Needed Methods**<br/>
+  * print: This takes in a Screen Object and copies it's representation array into the correct placement in the Screen Object's array.
 
+**The Tree Class:**<br/>
 You will create a class called Tree.java that will be an extension of the Plant class. For it's representation array, put the first character of the type of tree in lower case at the bottom center of the representation array with every other cell fill with a period.
 
 Types of Trees that can be created:
@@ -84,8 +83,7 @@ Types of Trees that can be created:
   * A Banana Tree (inputed as "banana")
   * A Coconut Tree (inputed as "coconut")
 
-**The Flower Class:**
-
+**The Flower Class:**<br/>
 You will create a class called Flower.java that will be an extension of the Plant class. For it's representation array, put the first character of the type of flower in lower case in the center of the representation array with every other cell fill with a period.
 
 Types of Flowers that can be created:
@@ -94,8 +92,7 @@ Types of Flowers that can be created:
   * A Daisy (inputed as "daisy")
   * A Sunflower (inputed as "sunflower")
 
-**The Vegetable Class:**
-
+**The Vegetable Class:**<br/>
 You will create a class called Vegetable.java that will be an extension of the Plant class. For it's representation array, put the first character of the type of vegetable in lower case at the bottom center of the representation array with every other cell fill with a period.
 
 Types of Trees that can be created:
@@ -108,7 +105,7 @@ Types of Trees that can be created:
 (**NOTE ABOUT INPUT:** Input from the file is not case sensitive so you will have to sanitize your input) 
 
 
-**Representations**
+**Representations**<br/>
 The following are examples of representation arrays for different types of plants.
 Given that the size is 4.
 
